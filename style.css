@@ -1,281 +1,380 @@
-export default function BarbeariaHomePage() {
-  const servicos = [
-    { titulo: 'Corte Favela Premium', preco: 35 },
-    { titulo: 'Navalhado do MC', preco: 45 },
-    { titulo: 'Barba na Régua', preco: 25 },
-    { titulo: 'Pigmentação', preco: 20 },
-    { titulo: 'Sobrancelha', preco: 15 },
-    { titulo: 'Combo Artista', preco: 70 },
-  ];
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-  const total = servicos.reduce((acc, item) => acc + item.preco, 0);
+body{
+  background:#000;
+  color:white;
+  overflow-x:hidden;
+}
 
-  return (
-    <div className="min-h-screen bg-black text-white font-sans">
-      {/* HERO */}
-      <section
-        className="relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/images/barbearia-joninhas-banner.png')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
+/* HERO */
 
-        <header className="relative z-10 flex items-center justify-between px-8 py-6">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-[0.3em] uppercase text-cyan-400 animate-pulse drop-shadow-[0_0_10px_#22d3ee]" style={{ textShadow: '0 0 5px #22d3ee, 0 0 15px #22d3ee, 0 0 30px #06b6d4' }}>
-            Barbearia do Joninhas
-          </h1>
+.hero{
+  position:relative;
+  min-height:100vh;
+  background-image:url("images/barbearia-joninhas-banner.png");
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
 
-          <nav className="hidden md:flex gap-8 text-lg">
-            <a href="#sobre" className="hover:text-yellow-500 transition">
-              Sobre
-            </a>
-            <a href="#servicos" className="hover:text-yellow-500 transition">
-              Serviços
-            </a>
-            <a href="#agenda" className="hover:text-yellow-500 transition">
-              Agenda
-            </a>
-            <a href="#contato" className="hover:text-yellow-500 transition">
-              Contato
-            </a>
-          </nav>
-        </header>
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.70);
+}
 
-        <div className="relative z-10 flex min-h-[80%] items-start justify-between px-6 md:px-16 py-10 gap-10">
+/* HEADER */
 
-          <div className="max-w-2xl text-center lg:text-left mt-20">
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase leading-tight drop-shadow-lg text-white">
-              Da Favela <br />
-              Para o Sucesso
-            </h2>
+header{
+  position:relative;
+  z-index:5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 60px;
+}
 
-            <p className="mt-4 max-w-lg text-xs md:text-sm text-gray-200 leading-6 bg-black/40 p-4 rounded-2xl backdrop-blur-sm border border-pink-500/30">
-              Um espaço inspirado na cultura do funk, na humildade da favela e na vitória de quem venceu através da música, do trabalho e do respeito. Aqui o cliente chega como cria e sai como artista.
-            </p>
+.logo span{
+  font-size:13px;
+  letter-spacing:5px;
+}
 
-            <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="https://wa.me/5500000000000"
-                target="_blank"
-                className="rounded-2xl bg-pink-500 px-6 py-3 text-base font-bold text-white shadow-[0_0_25px_#ec4899] transition hover:scale-105 hover:bg-pink-400"
-              >
-                Agendar pelo WhatsApp
-              </a>
+.logo h1{
+  font-size:55px;
+  color:#00d9ff;
+  text-shadow:
+    0 0 10px #00d9ff,
+    0 0 20px #00d9ff,
+    0 0 40px #00d9ff;
+}
 
-              <a
-                href="#servicos"
-                className="rounded-2xl border border-cyan-400 px-6 py-3 text-base font-bold text-cyan-400 transition hover:bg-cyan-400 hover:text-black shadow-[0_0_20px_#22d3ee]"
-              >
-                Ver serviços
-              </a>
-            </div>
-          </div>
+nav{
+  display:flex;
+  gap:30px;
+}
 
-          <div className="absolute top-28 right-6 md:right-16 w-full max-w-[240px] bg-black/85 border border-pink-500 rounded-3xl p-4 shadow-[0_0_35px_#ec4899] backdrop-blur-md">
-            <h4 className="text-pink-400 text-sm md:text-base font-bold mb-3 uppercase tracking-[0.2em] text-center">
-              Agenda do Barbeiro
-            </h4>
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
 
-            <div className="space-y-2 text-left text-[10px] md:text-[11px]">
-              <div className="bg-zinc-900 rounded-xl p-3 border border-cyan-400">
-                <p className="font-bold text-white">08:00 - 09:00</p>
-                <p className="text-cyan-400">Disponível</p>
-              </div>
+nav a:hover{
+  color:#ff00aa;
+}
 
-              <div className="bg-zinc-900 rounded-xl p-3 border border-pink-500">
-                <p className="font-bold text-white">13:30 - 14:00</p>
-                <p className="text-pink-400">MC Darlan - Agendado</p>
-              </div>
+.whatsapp-btn{
+  border:2px solid #00d9ff;
+  padding:14px 24px;
+  border-radius:15px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px #00d9ff;
+  transition:0.3s;
+}
 
-              <div className="bg-zinc-900 rounded-xl p-3 border border-yellow-500">
-                <p className="font-bold text-white">18:00 - 19:00</p>
-                <p className="text-yellow-400">Combo Artista</p>
-              </div>
-            </div>
+.whatsapp-btn:hover{
+  background:#00d9ff;
+  color:black;
+}
 
-            <button className="mt-4 w-full rounded-2xl bg-pink-500 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-pink-400 transition shadow-[0_0_20px_#ec4899]">
-              Ver Agenda Completa
-            </button>
-          </div>
-        </div>
-      </section>
+/* HERO CONTENT */
 
-      {/* SOBRE */}
-      <section id="sobre" className="grid md:grid-cols-2 gap-10 px-8 py-20 items-center bg-gradient-to-b from-zinc-950 to-black">
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1974&auto=format&fit=crop"
-            alt="Barbearia"
-            className="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
-          />
-        </div>
+.hero-content{
+  position:relative;
+  z-index:2;
+  min-height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-        <div>
-          <h3 className="text-4xl font-bold text-yellow-500 mb-6">
-            Sobre a Barbearia
-          </h3>
+/* TEXTO ESQUERDO */
 
-          <p className="text-gray-300 text-lg leading-8">
-            A Barbearia do Joninhas nasceu dentro da comunidade para mostrar que talento, humildade e determinação transformam vidas.
-            Aqui cada cliente recebe um atendimento diferenciado, ambiente moderno
-            e cortes de qualidade profissional.
-          </p>
+.favela-text{
+  position:absolute;
+  left:60px;
+  top:170px;
+  max-width:350px;
+}
 
-          <p className="text-gray-400 mt-6 leading-8">
-            Trabalhamos com cortes masculinos, barba, sobrancelha e pigmentação.
-            Tudo com funk, resenha saudável, cortes modernos e uma atmosfera inspirada na vitória de quem corre atrás dos sonhos honestamente.
-          </p>
-        </div>
-      </section>
+.favela-text h2{
+  font-size:42px;
+  line-height:1.1;
+  color:#ff00aa;
+  text-shadow:
+    0 0 10px #ff00aa,
+    0 0 25px #ff00aa;
+}
 
-      {/* SERVIÇOS */}
-      <section id="servicos" className="px-8 py-20 bg-black">
-        <div className="text-center mb-14">
-          <h3 className="text-4xl font-bold text-yellow-500">
-            Nossos Serviços
-          </h3>
-          <p className="text-gray-400 mt-4 text-lg">
-            Qualidade, estilo e presença.
-          </p>
-        </div>
+.favela-text p{
+  margin-top:18px;
+  font-size:18px;
+  color:#fff;
+}
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {servicos.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-3xl bg-gradient-to-b from-zinc-900 to-black p-8 border border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:-translate-y-2 transition"
-            >
-              <h4 className="text-2xl font-bold text-cyan-400 uppercase tracking-wide">
-                {item.titulo}
-              </h4>
+/* TITULO CENTRAL */
 
-              <p className="mt-6 text-5xl font-extrabold text-white">
-                R$ {item.preco}
-              </p>
+.main-title{
+  text-align:center;
+}
 
-              <div className="mt-6 rounded-2xl bg-zinc-950 border border-pink-500 p-4">
-                <p className="text-pink-400 font-bold text-lg">
-                  Simular valor do pedido
-                </p>
+.main-title p{
+  letter-spacing:8px;
+  font-size:18px;
+}
 
-                <div className="mt-3 flex items-center justify-between text-white">
-                  <span>1 serviço selecionado</span>
-                  <span className="text-2xl font-extrabold text-cyan-400">
-                    R$ {item.preco}
-                  </span>
-                </div>
-              </div>
+.main-title h1{
+  font-size:120px;
+  color:#00d9ff;
+  text-shadow:
+    0 0 10px #00d9ff,
+    0 0 30px #00d9ff,
+    0 0 60px #00d9ff;
+}
 
-              <button className="mt-8 w-full rounded-2xl bg-cyan-400 py-3 text-lg font-bold text-black hover:bg-cyan-300 transition shadow-[0_0_20px_#22d3ee]">
-                Agendar Agora
-              </button>
-            </div>
-          ))}
-        </div>
+/* ICONES */
 
-        <div className="max-w-4xl mx-auto mt-14 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-pink-500/20 border border-cyan-400 p-8 shadow-[0_0_25px_rgba(34,211,238,0.4)]">
-          <h4 className="text-3xl font-bold text-cyan-400 uppercase text-center">
-            Calculadora da Quebrada
-          </h4>
+.icons{
+  display:flex;
+  gap:50px;
+  justify-content:center;
+  margin-top:40px;
+}
 
-          <p className="text-center text-gray-300 mt-4 text-lg">
-            Monte seu estilo e veja o valor na hora.
-          </p>
+.icon-box{
+  text-align:center;
+}
 
-          <div className="grid md:grid-cols-3 gap-4 mt-8 text-center">
-            {servicos.map((item, index) => (
-              <div key={index} className="bg-black rounded-2xl p-4 border border-zinc-700">
-                <p className="text-white font-bold">{item.titulo}</p>
-                <p className="text-cyan-400 text-2xl font-extrabold mt-2">R$ {item.preco}</p>
-              </div>
-            ))}
-          </div>
+.icon-box i{
+  font-size:38px;
+  color:#ff00aa;
+  margin-bottom:15px;
+}
 
-          <div className="mt-8 text-center">
-            <p className="text-gray-300 text-lg">Valor máximo do pacote completo</p>
-            <p className="text-5xl font-extrabold text-pink-400 mt-3">
-              R$ {total}
-            </p>
-          </div>
-        </div>
-      </section>
+.icon-box p{
+  font-size:14px;
+  font-weight:bold;
+  line-height:1.6;
+}
 
-      {/* AGENDA */}
-      <section id="agenda" className="px-8 py-20 bg-zinc-950">
-        <div className="max-w-4xl mx-auto rounded-3xl bg-zinc-900 p-10 shadow-2xl border border-zinc-800">
-          <h3 className="text-4xl font-bold text-yellow-500 text-center mb-10">
-            Agende seu horário
-          </h3>
+/* BOTAO */
 
-          <form className="grid gap-6">
-            <input
-              type="text"
-              placeholder="Seu nome"
-              className="rounded-2xl bg-black border border-zinc-700 p-4 text-white outline-none focus:border-yellow-500"
-            />
+.agendar-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:15px;
+  margin-top:50px;
+  border:2px solid #ff00aa;
+  padding:18px 40px;
+  border-radius:20px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:20px;
+  box-shadow:0 0 20px #ff00aa;
+  transition:0.3s;
+}
 
-            <input
-              type="tel"
-              placeholder="WhatsApp"
-              className="rounded-2xl bg-black border border-zinc-700 p-4 text-white outline-none focus:border-yellow-500"
-            />
+.agendar-btn:hover{
+  background:#ff00aa;
+}
 
-            <select className="rounded-2xl bg-black border border-zinc-700 p-4 text-white outline-none focus:border-yellow-500">
-              <option>Escolha o serviço</option>
-              <option>Corte Degradê</option>
-              <option>Barba Completa</option>
-              <option>Corte + Barba</option>
-            </select>
+/* AGENDA PEQUENA NO TOPO */
 
-            <input
-              type="date"
-              className="rounded-2xl bg-black border border-zinc-700 p-4 text-white outline-none focus:border-yellow-500"
-            />
+.agenda-box{
+  position:absolute;
+  top:140px;
+  right:60px;
+  width:240px;
+  z-index:5;
+  background:rgba(0,0,0,0.85);
+  border:2px solid #ff00aa;
+  border-radius:25px;
+  padding:20px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 25px #ff00aa;
+}
 
-            <button className="rounded-2xl bg-yellow-500 py-4 text-xl font-bold text-black hover:bg-yellow-400 transition">
-              Confirmar Agendamento
-            </button>
-          </form>
-        </div>
-      </section>
+.agenda-box h3{
+  text-align:center;
+  color:#ff00aa;
+  font-size:15px;
+  margin-bottom:20px;
+  letter-spacing:3px;
+}
 
-      {/* CONTATO */}
-      <section id="contato" className="px-8 py-20 bg-black text-center">
-        <h3 className="text-4xl font-bold text-yellow-500">
-          Contato
-        </h3>
+.horario{
+  background:#111;
+  border-radius:15px;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #00d9ff;
+}
 
-        <p className="mt-6 text-lg text-gray-300">
-          Rua Exemplo, 123 - Centro
-        </p>
+.horario strong{
+  display:block;
+  font-size:13px;
+  margin-bottom:5px;
+}
 
-        <p className="mt-2 text-lg text-gray-300">
-          WhatsApp: (51) 99999-9999
-        </p>
+.horario span{
+  color:#00d9ff;
+  font-size:12px;
+}
 
-        <div className="mt-8 flex justify-center gap-6">
-          <a
-            href="#"
-            className="rounded-2xl border border-yellow-500 px-6 py-3 hover:bg-yellow-500 hover:text-black transition"
-          >
-            Instagram
-          </a>
+/* SERVIÇOS */
 
-          <a
-            href="#"
-            className="rounded-2xl border border-yellow-500 px-6 py-3 hover:bg-yellow-500 hover:text-black transition"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </section>
+.servicos{
+  padding:100px 40px;
+  text-align:center;
+  background:#050505;
+}
 
-      {/* FOOTER */}
-      <footer className="border-t border-zinc-800 py-6 text-center text-gray-500">
-        © 2026 Barbearia do Joninhas - Todos os direitos reservados.
-      </footer>
-    </div>
-  );
+.servicos h2{
+  font-size:50px;
+  margin-bottom:60px;
+  color:#00d9ff;
+}
+
+.cards{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:300px;
+  background:rgba(0,0,0,0.85);
+  border:2px solid #00d9ff;
+  border-radius:30px;
+  padding:40px;
+  box-shadow:0 0 20px rgba(0,217,255,0.4);
+}
+
+.card h3{
+  font-size:28px;
+}
+
+.card span{
+  display:block;
+  margin:30px 0;
+  font-size:50px;
+  color:#ff00aa;
+  font-weight:bold;
+}
+
+.card button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:15px;
+  background:#00d9ff;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* AGENDA FORM */
+
+.agenda{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.agenda h2{
+  font-size:50px;
+  color:#00d9ff;
+  margin-bottom:50px;
+}
+
+form{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+select{
+  padding:20px;
+  border:none;
+  border-radius:15px;
+  background:#111;
+  color:white;
+  font-size:18px;
+}
+
+form button{
+  padding:20px;
+  border:none;
+  border-radius:18px;
+  background:#ff00aa;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #222;
+  color:#888;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  header{
+    flex-direction:column;
+    gap:20px;
+    padding:30px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .main-title h1{
+    font-size:70px;
+  }
+
+  .favela-text{
+    position:relative;
+    left:0;
+    top:0;
+    text-align:center;
+    margin-bottom:50px;
+  }
+
+  .hero-content{
+    flex-direction:column;
+    padding:40px 20px;
+  }
+
+  .icons{
+    flex-direction:column;
+  }
+
+  .agenda-box{
+    position:relative;
+    top:0;
+    right:0;
+    margin-top:40px;
+  }
+
 }
