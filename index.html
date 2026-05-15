@@ -1,88 +1,165 @@
-<!-- SEÇÃO DE VENDAS -->
 
-<section class="vendas">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="titulo-vendas">
-    <h2>OFERTAS DE PNEUS</h2>
-    <p>
-      Pneus novos e seminovos com os melhores preços da região.
-    </p>
-  </div>
+  <title>Barbearia do Joninhas</title>
 
-  <div class="produtos">
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- PRODUTO 1 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
 
-    <div class="produto-card">
+<body>
 
-      <span class="promo">OFERTA</span>
+  <!-- HERO -->
+  <section class="hero">
 
-      <img src="https://images.unsplash.com/photo-1613214150384-a24eb8ff3f45?q=80&w=1200&auto=format&fit=crop" alt="">
+    <div class="overlay"></div>
 
-      <h3>PNEU ARO 15</h3>
+    <!-- HEADER -->
+    <header>
 
-      <p class="descricao">
-        Excelente durabilidade e alta performance.
-      </p>
-
-      <div class="preco">
-        <span>R$ 399,90</span>
+      <div class="logo">
+        <span>BARBEARIA DO</span>
+        <h1>JONINHAS</h1>
       </div>
 
-      <a href="https://wa.me/555194169250" target="_blank">
-        COMPRAR AGORA
+      <nav>
+        <a href="#">INÍCIO</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#sobre">ARTISTAS</a>
+        <a href="#galeria">GALERIA</a>
+        <a href="#contato">SOBRE NÓS</a>
+      </nav>
+
+      <a
+        href="https://wa.me/5551999999999"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        CHAMAR NO WHATSAPP
       </a>
+
+    </header>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+
+      <div class="favela-text">
+        <h2>
+          DA FAVELA <br />
+          PARA O SUCESSO
+        </h2>
+
+        <p>
+          Fé, foco e disciplina
+        </p>
+      </div>
+
+      <div class="main-title">
+
+        <p>BARBEARIA DO</p>
+
+        <h1>JONINHAS</h1>
+
+        <div class="icons">
+
+          <div class="icon-box">
+            <i class="fa-regular fa-gem"></i>
+            <p>ESCOLHA <br /> SEU ESTILO</p>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-microphone"></i>
+            <p>ATENDIMENTO <br /> DE RESPEITO</p>
+          </div>
+
+          <div class="icon-box">
+            <i class="fa-solid fa-crown"></i>
+            <p>INSPIRAÇÃO <br /> NO FUNK</p>
+          </div>
+
+        </div>
+
+        <a href="#agenda" class="agendar-btn">
+          <i class="fa-regular fa-calendar"></i>
+          AGENDAR AGORA
+        </a>
+
+      </div>
 
     </div>
 
-    <!-- PRODUTO 2 -->
+  </section>
 
-    <div class="produto-card">
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
 
-      <span class="promo">TOP VENDA</span>
+    <h2>NOSSOS SERVIÇOS</h2>
 
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="">
+    <div class="cards">
 
-      <h3>PNEU SUV</h3>
-
-      <p class="descricao">
-        Ideal para caminhonetes e SUV.
-      </p>
-
-      <div class="preco">
-        <span>R$ 599,90</span>
+      <div class="card">
+        <h3>CORTE FAVELA</h3>
+        <span>R$ 35</span>
+        <button>AGENDAR</button>
       </div>
 
-      <a href="https://wa.me/555194169250" target="_blank">
-        COMPRAR AGORA
-      </a>
+      <div class="card">
+        <h3>NAVALHADO MC</h3>
+        <span>R$ 45</span>
+        <button>AGENDAR</button>
+      </div>
+
+      <div class="card">
+        <h3>COMBO ARTISTA</h3>
+        <span>R$ 70</span>
+        <button>AGENDAR</button>
+      </div>
 
     </div>
 
-    <!-- PRODUTO 3 -->
+  </section>
 
-    <div class="produto-card">
+  <!-- AGENDA -->
+  <section class="agenda" id="agenda">
 
-      <span class="promo">SEMINOVO</span>
+    <h2>AGENDE SEU HORÁRIO</h2>
 
-      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="">
+    <form>
 
-      <h3>PNEU ARO 17</h3>
+      <input type="text" placeholder="Seu Nome" />
 
-      <p class="descricao">
-        Pneus seminovos revisados e garantidos.
-      </p>
+      <input type="tel" placeholder="WhatsApp" />
 
-      <div class="preco">
-        <span>R$ 249,90</span>
-      </div>
+      <select>
+        <option>Escolha o serviço</option>
+        <option>Corte Favela</option>
+        <option>Navalhado MC</option>
+        <option>Combo Artista</option>
+      </select>
 
-      <a href="https://wa.me/555194169250" target="_blank">
-        COMPRAR AGORA
-      </a>
+      <input type="date" />
 
-    </div>
+      <button type="submit">
+        CONFIRMAR AGENDAMENTO
+      </button>
 
-  </div>
+    </form>
 
-</section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Barbearia do Joninhas
+  </footer>
+
+</body>
+</html>
