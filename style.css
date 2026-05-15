@@ -1,319 +1,165 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
-}
 
-body{
-  background:#000;
-  color:#fff;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-/* HERO */
+  <title>Barbearia do Joninhas</title>
 
-.hero{
-  position:relative;
-  min-height:100vh;
-  background-image:url("images/barbearia-joninhas-banner.png");
-  background-size:cover;
-  background-position:center;
-  overflow:hidden;
-}
+  <link rel="stylesheet" href="style.css" />
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
 
-header{
-  position:relative;
-  z-index:2;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:30px 60px;
-}
+<body>
 
-.logo span{
-  font-size:14px;
-  letter-spacing:4px;
-}
+  <!-- HERO -->
+  <section class="hero">
 
-.logo h1{
-  font-size:60px;
-  color:#00d9ff;
-  text-shadow:
-    0 0 10px #00d9ff,
-    0 0 20px #00d9ff,
-    0 0 40px #00d9ff;
-}
+    <div class="overlay"></div>
 
-nav{
-  display:flex;
-  gap:30px;
-}
+    <!-- HEADER -->
+    <header>
 
-nav a{
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
+      <div class="logo">
+        <span>BARBEARIA DO</span>
+        <h1>JONINHAS</h1>
+      </div>
 
-nav a:hover{
-  color:#ff00aa;
-}
+      <nav>
+        <a href="#">INÍCIO</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#sobre">ARTISTAS</a>
+        <a href="#galeria">GALERIA</a>
+        <a href="#contato">SOBRE NÓS</a>
+      </nav>
 
-.whatsapp-btn{
-  border:2px solid #00d9ff;
-  padding:14px 24px;
-  border-radius:14px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 0 15px #00d9ff;
-  transition:0.3s;
-}
+      <a
+        href="https://wa.me/5551999999999"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        CHAMAR NO WHATSAPP
+      </a>
 
-.whatsapp-btn:hover{
-  background:#00d9ff;
-  color:black;
-}
+    </header>
 
-/* HERO CONTENT */
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:80vh;
-  padding:40px;
-}
+      <div class="favela-text">
+        <h2>
+          DA FAVELA <br />
+          PARA O SUCESSO
+        </h2>
 
-.favela-text{
-  position:absolute;
-  left:70px;
-  top:200px;
-}
+        <p>
+          Fé, foco e disciplina
+        </p>
+      </div>
 
-.favela-text h2{
-  font-size:60px;
-  color:#ff00aa;
-  line-height:1.1;
-  text-shadow:
-    0 0 10px #ff00aa,
-    0 0 30px #ff00aa;
-}
+      <div class="main-title">
 
-.favela-text p{
-  margin-top:20px;
-  font-size:28px;
-}
+        <p>BARBEARIA DO</p>
 
-.main-title{
-  text-align:center;
-}
+        <h1>JONINHAS</h1>
 
-.main-title p{
-  letter-spacing:8px;
-  font-size:22px;
-}
+        <div class="icons">
 
-.main-title h1{
-  font-size:120px;
-  color:#00d9ff;
-  text-shadow:
-    0 0 10px #00d9ff,
-    0 0 30px #00d9ff,
-    0 0 60px #00d9ff;
-}
+          <div class="icon-box">
+            <i class="fa-regular fa-gem"></i>
+            <p>ESCOLHA <br /> SEU ESTILO</p>
+          </div>
 
-.icons{
-  margin-top:40px;
-  display:flex;
-  gap:50px;
-  justify-content:center;
-}
+          <div class="icon-box">
+            <i class="fa-solid fa-microphone"></i>
+            <p>ATENDIMENTO <br /> DE RESPEITO</p>
+          </div>
 
-.icon-box{
-  text-align:center;
-}
+          <div class="icon-box">
+            <i class="fa-solid fa-crown"></i>
+            <p>INSPIRAÇÃO <br /> NO FUNK</p>
+          </div>
 
-.icon-box i{
-  color:#ff00aa;
-  font-size:40px;
-  margin-bottom:15px;
-}
+        </div>
 
-.icon-box p{
-  font-weight:bold;
-  line-height:1.6;
-}
+        <a href="#agenda" class="agendar-btn">
+          <i class="fa-regular fa-calendar"></i>
+          AGENDAR AGORA
+        </a>
 
-.agendar-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:15px;
-  margin-top:50px;
-  border:2px solid #ff00aa;
-  padding:18px 40px;
-  border-radius:20px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:22px;
-  box-shadow:0 0 20px #ff00aa;
-  transition:0.3s;
-}
+      </div>
 
-.agendar-btn:hover{
-  background:#ff00aa;
-}
+    </div>
 
-/* SERVIÇOS */
+  </section>
 
-.servicos{
-  padding:100px 40px;
-  text-align:center;
-}
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
 
-.servicos h2{
-  font-size:50px;
-  margin-bottom:60px;
-  color:#00d9ff;
-}
+    <h2>NOSSOS SERVIÇOS</h2>
 
-.cards{
-  display:flex;
-  gap:30px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+    <div class="cards">
 
-.card{
-  background:rgba(0,0,0,0.8);
-  border:2px solid #00d9ff;
-  border-radius:30px;
-  padding:40px;
-  width:300px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 0 20px rgba(0,217,255,0.4);
-}
+      <div class="card">
+        <h3>CORTE FAVELA</h3>
+        <span>R$ 35</span>
+        <button>AGENDAR</button>
+      </div>
 
-.card h3{
-  font-size:28px;
-}
+      <div class="card">
+        <h3>NAVALHADO MC</h3>
+        <span>R$ 45</span>
+        <button>AGENDAR</button>
+      </div>
 
-.card span{
-  display:block;
-  margin:30px 0;
-  font-size:50px;
-  color:#ff00aa;
-  font-weight:bold;
-}
+      <div class="card">
+        <h3>COMBO ARTISTA</h3>
+        <span>R$ 70</span>
+        <button>AGENDAR</button>
+      </div>
 
-.card button{
-  width:100%;
-  padding:16px;
-  border:none;
-  border-radius:14px;
-  background:#00d9ff;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
+    </div>
 
-/* AGENDA */
+  </section>
 
-.agenda{
-  padding:100px 20px;
-  text-align:center;
-}
+  <!-- AGENDA -->
+  <section class="agenda" id="agenda">
 
-.agenda h2{
-  font-size:50px;
-  color:#00d9ff;
-  margin-bottom:50px;
-}
+    <h2>AGENDE SEU HORÁRIO</h2>
 
-form{
-  max-width:700px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
+    <form>
 
-input,
-select{
-  padding:20px;
-  border:none;
-  border-radius:16px;
-  background:#111;
-  color:white;
-  font-size:18px;
-}
+      <input type="text" placeholder="Seu Nome" />
 
-form button{
-  padding:20px;
-  border:none;
-  border-radius:18px;
-  background:#ff00aa;
-  color:white;
-  font-size:22px;
-  font-weight:bold;
-  cursor:pointer;
-}
+      <input type="tel" placeholder="WhatsApp" />
 
-/* FOOTER */
+      <select>
+        <option>Escolha o serviço</option>
+        <option>Corte Favela</option>
+        <option>Navalhado MC</option>
+        <option>Combo Artista</option>
+      </select>
 
-footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid #222;
-  color:#888;
-}
+      <input type="date" />
 
-/* RESPONSIVO */
+      <button type="submit">
+        CONFIRMAR AGENDAMENTO
+      </button>
 
-@media(max-width:900px){
+    </form>
 
-  header{
-    flex-direction:column;
-    gap:20px;
-  }
+  </section>
 
-  nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Barbearia do Joninhas
+  </footer>
 
-  .hero-content{
-    flex-direction:column;
-  }
-
-  .favela-text{
-    position:relative;
-    left:0;
-    top:0;
-    margin-bottom:50px;
-    text-align:center;
-  }
-
-  .favela-text h2{
-    font-size:42px;
-  }
-
-  .main-title h1{
-    font-size:70px;
-  }
-
-  .icons{
-    flex-direction:column;
-  }
-
-}
+</body>
+</html>
