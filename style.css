@@ -1,0 +1,323 @@
+/* ========================= */
+/* ARQUIVO: style.css */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  background-image:url("images/barbearia-joninhas-banner.png");
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+header{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 60px;
+}
+
+.logo span{
+  font-size:14px;
+  letter-spacing:4px;
+}
+
+.logo h1{
+  font-size:60px;
+  color:#00d9ff;
+  text-shadow:
+    0 0 10px #00d9ff,
+    0 0 20px #00d9ff,
+    0 0 40px #00d9ff;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ff00aa;
+}
+
+.whatsapp-btn{
+  border:2px solid #00d9ff;
+  padding:14px 24px;
+  border-radius:14px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px #00d9ff;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#00d9ff;
+  color:black;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:80vh;
+  padding:40px;
+}
+
+.favela-text{
+  position:absolute;
+  left:70px;
+  top:200px;
+}
+
+.favela-text h2{
+  font-size:60px;
+  color:#ff00aa;
+  line-height:1.1;
+  text-shadow:
+    0 0 10px #ff00aa,
+    0 0 30px #ff00aa;
+}
+
+.favela-text p{
+  margin-top:20px;
+  font-size:28px;
+}
+
+.main-title{
+  text-align:center;
+}
+
+.main-title p{
+  letter-spacing:8px;
+  font-size:22px;
+}
+
+.main-title h1{
+  font-size:120px;
+  color:#00d9ff;
+  text-shadow:
+    0 0 10px #00d9ff,
+    0 0 30px #00d9ff,
+    0 0 60px #00d9ff;
+}
+
+.icons{
+  margin-top:40px;
+  display:flex;
+  gap:50px;
+  justify-content:center;
+}
+
+.icon-box{
+  text-align:center;
+}
+
+.icon-box i{
+  color:#ff00aa;
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.icon-box p{
+  font-weight:bold;
+  line-height:1.6;
+}
+
+.agendar-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:15px;
+  margin-top:50px;
+  border:2px solid #ff00aa;
+  padding:18px 40px;
+  border-radius:20px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:22px;
+  box-shadow:0 0 20px #ff00aa;
+  transition:0.3s;
+}
+
+.agendar-btn:hover{
+  background:#ff00aa;
+}
+
+/* SERVIÇOS */
+
+.servicos{
+  padding:100px 40px;
+  text-align:center;
+}
+
+.servicos h2{
+  font-size:50px;
+  margin-bottom:60px;
+  color:#00d9ff;
+}
+
+.cards{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:rgba(0,0,0,0.8);
+  border:2px solid #00d9ff;
+  border-radius:30px;
+  padding:40px;
+  width:300px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(0,217,255,0.4);
+}
+
+.card h3{
+  font-size:28px;
+}
+
+.card span{
+  display:block;
+  margin:30px 0;
+  font-size:50px;
+  color:#ff00aa;
+  font-weight:bold;
+}
+
+.card button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:#00d9ff;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* AGENDA */
+
+.agenda{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.agenda h2{
+  font-size:50px;
+  color:#00d9ff;
+  margin-bottom:50px;
+}
+
+form{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+select{
+  padding:20px;
+  border:none;
+  border-radius:16px;
+  background:#111;
+  color:white;
+  font-size:18px;
+}
+
+form button{
+  padding:20px;
+  border:none;
+  border-radius:18px;
+  background:#ff00aa;
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #222;
+  color:#888;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  header{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content{
+    flex-direction:column;
+  }
+
+  .favela-text{
+    position:relative;
+    left:0;
+    top:0;
+    margin-bottom:50px;
+    text-align:center;
+  }
+
+  .favela-text h2{
+    font-size:42px;
+  }
+
+  .main-title h1{
+    font-size:70px;
+  }
+
+  .icons{
+    flex-direction:column;
+  }
+
+}
