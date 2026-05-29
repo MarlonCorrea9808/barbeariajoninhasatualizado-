@@ -135,6 +135,17 @@ nav a:hover{
   color:#fff;
   line-height:1.6;
 }
+.tag{
+  position:absolute;
+  top:15px;
+  right:-35px;
+  background:red;
+  color:white;
+  padding:8px 40px;
+  transform:rotate(45deg);
+  font-size:12px;
+  font-weight:bold;
+}
 
 /* TITULO CENTRAL */
 
@@ -260,6 +271,44 @@ nav a:hover{
   margin-bottom:60px;
   color:#00d9ff;
 }
+/* SEÇÃO SERVIÇOS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+.card{
+  background:#222;
+  padding:20px;
+  border-radius:10px;
+}
+
+.card h3{
+  color:white;
+}
+
+.card button{
+  background:#ffd000;
+}
+
+.card{
+    background: rgba(20,20,20,.95);
+    border: 2px solid #ffcc00;
+    border-radius: 20px;
+    padding: 25px;
+    text-align:center;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:
+    0 0 15px rgba(255,204,0,.4),
+    0 0 30px rgba(255,204,0,.2);
+}
+
+/* restante do código que te mandei */
 
 .cards{
   display:flex;
